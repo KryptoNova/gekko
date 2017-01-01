@@ -109,6 +109,14 @@ var plugins = [
     path: config => 'trader/trader.js',
   },
   {
+    name: 'Krypto Trader',
+    description: 'Begins trading after data load is completed.',
+    slug: 'kryptoTrader',
+    async: true,
+    modes: ['realtime'],
+    path: config => 'kryptoTrader/kryptoTrader.js',
+  },
+  {
     name: 'Advice logger',
     description: '',
     slug: 'adviceLogger',

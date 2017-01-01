@@ -57,8 +57,10 @@ TradeBatcher.prototype.write = function(batch) {
   var filterBatch = this.filter(batch);
 
   var amount = _.size(filterBatch);
-  if(!amount)
+  if(!amount) {
+    this.emit('all_loaded');
     return log.debug('No new trades.');
+  }
 
   var momentBatch = this.convertDates(filterBatch);
 

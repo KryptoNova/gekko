@@ -33,6 +33,22 @@
 //    to an URL explaining the problem.
 var exchanges = [
   {
+    name: 'Bittrex',
+    slug: 'bittrex',
+    direct: false,
+    infinityOrder: false,
+    currencies: ['BTC'],
+    assets: ['XDN','XMR', 'EMC2', 'XRP'],
+    markets: [
+        { pair: ['BTC', 'XDN'], minimalOrder: { amount: 0.00050000, unit: 'currency' } },
+        { pair: ['BTC', 'XMR'], minimalOrder: { amount: 0.00050000, unit: 'currency' } },
+        { pair: ['BTC', 'EMC2'], minimalOrder: { amount: 0.00050000, unit: 'currency' } },
+        { pair: ['BTC', 'XRP'], minimalOrder: { amount: 0.00050000, unit: 'currency' } }
+    ],
+    requires: ['key', 'secret'],
+    tid: 'tid'
+  },
+  {
     name: 'BTC-e',
     slug: 'btce',
     direct: false,
